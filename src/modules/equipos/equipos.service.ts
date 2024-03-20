@@ -17,4 +17,13 @@ export class EquiposService {
         }
         
       }
+
+    async findEquipo(id: number){
+        const equipo = this.equipoRepository.findOne({ where: { id } });
+        if(!equipo){
+            return null;
+        }else{
+            return equipo;
+        }
+    }
 }
