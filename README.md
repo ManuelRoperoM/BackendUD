@@ -57,6 +57,47 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
+# API del Backend de Torneo UD
+
+Este backend proporciona una serie de API para administrar equipos y partidos en el torneo UD.
+
+## Equipos
+
+### Crear Equipo
+
+Permite crear un nuevo equipo en el torneo.
+
+- **Método:** `POST`
+- **Endpoint:** `http://localhost:8080/equipos`
+- **Body:**
+  ```json
+  {
+      "nombre": "Tolima FC",
+      "pais": "Colombia",
+      "fundacion": 1975
+  }
+
+
+## Partidos
+
+Permite registrar los resultados de un partido entre dos equipos.
+
+- **Método:** `POST`
+- **Endpoint:** `http://localhost:8080/partidos`
+- **Body:**
+  ```json
+  {
+    "localScore": 4,
+    "foreanScore": 5,
+    "localId":1,
+    "visitanteId":1
+  }
+
+## Obtener Tabla de Posiciones
+Permite obtener la tabla de posiciones actualizada del torneo.
+
+Método: GET
+Endpoint: http://localhost:8080/partidos/getTabla
 
 ## Support
 
